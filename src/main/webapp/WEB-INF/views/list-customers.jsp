@@ -14,21 +14,21 @@
 <div class="container">
     <div class="col-md-offset-1 col-md-10">
         <h3 class="text-center">Spring MVC 5 + Spring Data JPA 2 + JSP +
-            MySQL Example - Customer Management</h3>
+            MySQL Example - PhoneBook Management</h3>
         <hr/>
 
-        <input class="btn btn-primary" type="button" value="Add Customer"
+        <input class="btn btn-primary" type="button" value="Add Entry"
                onclick="window.location.href='showForm'; return false;"/>
         <br/>
         <br/>
         <div class="panel panel-info">
             <div class="panel-heading">
-                <div class="panel-title">Customer List</div>
+                <div class="panel-title">PhoneBook List</div>
             </div>
             <div class="panel-body">
                 <table class="table table-striped table-bordered">
                     <tr>
-                        <th> Name</th>
+                        <th>Name</th>
                         <th>Phone</th>
                         <th>Action</th>
                     </tr>

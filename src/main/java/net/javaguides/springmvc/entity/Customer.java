@@ -20,9 +20,6 @@ public class Customer {
 	@Column(name="name")
 	private String name;
 	
-//	@Column(name="last_name")
-//	private String lastName;
-	
 	@Column(name="phone")
 	private String phone;
 	
@@ -46,14 +43,6 @@ public class Customer {
 		this.name = name;
 	}
 
-//	public String getLastName() {
-//		return lastName;
-//	}
-//
-//	public void setLastName(String lastName) {
-//		this.lastName = lastName;
-//	}
-
 	public String getPhone() {
 		return phone;
 	}
@@ -64,7 +53,7 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", firstName=" + name + ", phone=" + phone + "]";
+		return "Customer [id=" + id + ", Name=" + name + ", phone=" + phone + "]";
 	}
 }
 
