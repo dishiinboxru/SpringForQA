@@ -5,7 +5,7 @@ create table if not exists customer
     id int auto_increment
         primary key,
     first_name varchar(32) not null,
-    email varchar(32) not null,
-    constraint customer_email_uindex
-        unique (email)
+    phone varchar(32) not null,
+    constraint customer_phone_uindex
+        unique (phone)
 );

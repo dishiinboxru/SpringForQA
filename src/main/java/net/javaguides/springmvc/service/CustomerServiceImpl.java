@@ -53,8 +53,3 @@ public class CustomerServiceImpl implements CustomerService {
 		customerRepository.deleteByName(name);
 	}
 }
-
-
-
-
-

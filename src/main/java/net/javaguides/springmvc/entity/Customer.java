@@ -24,7 +24,6 @@ public class Customer {
 	private String phone;
 	
 	public Customer() {
-		
 	}
 
 	public int getId() {
@@ -56,8 +55,3 @@ public class Customer {
 		return "Customer [id=" + id + ", Name=" + name + ", phone=" + phone + "]";
 	}
 }
-
-
-
-
-

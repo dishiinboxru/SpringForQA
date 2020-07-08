@@ -57,7 +57,7 @@ public class CustomerController {
     @DeleteMapping("/customers/{name}")
     @ResponseBody
     public void deleteCustomer (@PathVariable String name) throws ResourceNotFoundException {
-        Customer customerCheck = customerService.getCustomerByName(name); //TODO - perhaps there is a better way to trigger exception and a text for DELETE, but I've spent too much time here already
+        Customer customerCheck = customerService.getCustomerByName(name); //TODO - open question - perhaps there is a better way to trigger exception and a text for DELETE, but I've spent too much time here already
 
         customerService.deleteCustomerByName(name);
     }

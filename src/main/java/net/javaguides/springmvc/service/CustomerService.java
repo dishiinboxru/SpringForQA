@@ -20,5 +20,4 @@ public interface CustomerService {
 
 	void deleteCustomerByName(String name) throws ResourceNotFoundException ;
 
-
 }

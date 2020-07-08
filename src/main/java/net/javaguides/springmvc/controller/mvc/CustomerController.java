@@ -48,8 +48,7 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/updateForm")
-	public String showFormForUpdate(@RequestParam("customerId") int theId,
-									Model theModel) throws ResourceNotFoundException {
+	public String showFormForUpdate(@RequestParam("customerId") int theId, Model theModel) throws ResourceNotFoundException {
 		Customer theCustomer = customerService.getCustomer(theId);	
 		theModel.addAttribute("customer", theCustomer);
 		return "customer-form";
