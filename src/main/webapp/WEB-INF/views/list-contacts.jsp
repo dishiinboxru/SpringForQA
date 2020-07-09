@@ -33,26 +33,26 @@
                         <th>Action</th>
                     </tr>
 
-                    <!-- loop over and print our customers -->
-                    <c:forEach var="tempCustomer" items="${customers}">
+                    <!-- loop over and print our contacts -->
+                    <c:forEach var="tempContact" items="${contacts}">
 
-                        <!-- construct an "update" link with customer id -->
-                        <c:url var="updateLink" value="/customer/updateForm">
-                            <c:param name="customerId" value="${tempCustomer.id}"/>
+                        <!-- construct an "update" link with contact id -->
+                        <c:url var="updateLink" value="/contact/updateForm">
+                            <c:param name="contactId" value="${tempContact.id}"/>
                         </c:url>
 
-                        <!-- construct an "delete" link with customer id -->
-                        <c:url var="deleteLink" value="/customer/delete">
-                            <c:param name="customerId" value="${tempCustomer.id}"/>
+                        <!-- construct an "delete" link with contact id -->
+                        <c:url var="deleteLink" value="/contact/delete">
+                            <c:param name="contactId" value="${tempContact.id}"/>
                         </c:url>
 
                         <tr>
-                            <td>${tempCustomer.name}</td>
-                            <td>${tempCustomer.phone}</td>
+                            <td>${tempContact.name}</td>
+                            <td>${tempContact.phone}</td>
                             <td>
                                 <!-- display the update link -->
                                 <a href="${updateLink}">Update</a> | <a href="${deleteLink}"
-                                     onclick="if (!(confirm('Are you sure you want to delete this customer?')))
+                                     onclick="if (!(confirm('Are you sure you want to delete this contact?')))
                                          return false">Delete</a>
                             </td>
                         </tr>

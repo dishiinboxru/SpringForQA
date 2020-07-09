@@ -13,15 +13,15 @@
 <body>
 <div class="container">
     <div class="col-md-offset-2 col-md-7">
-        <h3 class="text-center">Spring MVC 5 + Spring Data JPA 2 + JSP + MySQL Example - Customer Management</h3>
+        <h3 class="text-center">Spring MVC 5 + Spring Data JPA 2 + JSP + MySQL Example - Contact Management</h3>
         <div class="panel panel-info">
             <div class="panel-heading">
-                <div class="panel-title">Add Customer</div>
+                <div class="panel-title">Add Contact</div>
             </div>
             <div class="panel-body">
-                <form:form action="saveCustomer" cssClass="form-horizontal" method="post" modelAttribute="customer">
+                <form:form action="saveContact" cssClass="form-horizontal" method="post" modelAttribute="contact">
 
-                    <!-- need to associate this data with customer id -->
+                    <!-- need to associate this data with contact id -->
                     <form:hidden path="id"/>
 
                     <div class="form-group">

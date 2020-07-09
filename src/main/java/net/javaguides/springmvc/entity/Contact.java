@@ -9,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="customer")
-public class Customer {
+@Table(name="contact")
+public class Contact {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -23,7 +23,7 @@ public class Customer {
 	@Column(name="phone")
 	private String phone;
 	
-	public Customer() {
+	public Contact() {
 	}
 
 	public int getId() {
@@ -52,6 +52,6 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", Name=" + name + ", phone=" + phone + "]";
+		return "Contact [id=" + id + ", Name=" + name + ", phone=" + phone + "]";
 	}
 }

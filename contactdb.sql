@@ -1,11 +1,11 @@
 create schema if not exists test collate utf8mb4_general_ci;
 
-create table if not exists customer
+create table if not exists contact
 (
     id int auto_increment
         primary key,
     first_name varchar(32) not null,
     phone varchar(32) not null,
-    constraint customer_phone_uindex
+    constraint contact_phone_uindex
         unique (phone)
 );

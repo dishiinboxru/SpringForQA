@@ -14,7 +14,7 @@ POST/; {“name”:”YourName”, “phoneNumber”: “+79998887711”} - crea
 
 DELETE/{name} - removes record by name completely (including associated phone numbers).
 
-Rest resources must be located under api/v1/customers.
+Rest resources must be located under api/v1/contacts.
 
 Use JSON as request/response body.
 

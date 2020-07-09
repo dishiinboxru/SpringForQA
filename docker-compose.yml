@@ -14,7 +14,7 @@ services:
       MYSQL_DATABASE: 'test'
     volumes:
       - vikta-mysql-data-volume:/var/lib/mysql
-      - ./customerdb.sql:/docker-entrypoint-initdb.d/customerdb.sql
+      - ./contactdb.sql:/docker-entrypoint-initdb.d/contactdb.sql
 
 volumes:
   vikta-mysql-data-volume:
