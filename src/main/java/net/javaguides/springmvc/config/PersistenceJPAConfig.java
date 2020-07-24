@@ -23,12 +23,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @PropertySource({ "classpath:database.properties" })
+@PropertySource({ "classpath:hibernate.properties" })
 @ComponentScan({ "net.javaguides.springmvc" })
 @EnableJpaRepositories(basePackages = "net.javaguides.springmvc.repository")
 public class PersistenceJPAConfig {
 
     @Autowired
     private Environment env;
+    private Properties hibernateProperties ;
 
     public PersistenceJPAConfig() {
         super();
@@ -42,18 +44,9 @@ public class PersistenceJPAConfig {
 
         final HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         entityManagerFactoryBean.setJpaVendorAdapter(vendorAdapter);
-        entityManagerFactoryBean.setJpaProperties(additionalProperties());
+        entityManagerFactoryBean.setJpaProperties(hibernateProperties);
 
         return entityManagerFactoryBean;
-    }
-
-    final Properties additionalProperties() {
-        final Properties hibernateProperties = new Properties();
-        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
-        hibernateProperties.setProperty("hibernate.dialect", env.getProperty("hibernate.dialect"));
-        hibernateProperties.setProperty("hibernate.cache.use_second_level_cache", env.getProperty("hibernate.cache.use_second_level_cache"));
-        hibernateProperties.setProperty("hibernate.cache.use_query_cache", env.getProperty("hibernate.cache.use_query_cache"));
-        return hibernateProperties;
     }
     
     @Bean

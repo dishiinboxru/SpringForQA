@@ -16,6 +16,4 @@ public class ResourceNotFoundAdvice {
     String resourceNotFoundHandler(ResourceNotFoundException ex) {
         return String.format("resource not found '%s'", ex.getMessage());
     }
-
-
 }

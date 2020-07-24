@@ -1,6 +1,6 @@
 version: "3"
 services:
-  vikta-mysql:
+  mysql:
     image: mysql:5.7
     container_name: 'mysql-phonebook'
     hostname: 'mysql-phonebook'
@@ -13,9 +13,9 @@ services:
       MYSQL_PASSWORD: 'pass'
       MYSQL_DATABASE: 'test'
     volumes:
-      - vikta-mysql-data-volume:/var/lib/mysql
+      - mysql-data-volume:/var/lib/mysql
       - ./contactdb.sql:/docker-entrypoint-initdb.d/contactdb.sql
 
 volumes:
-  vikta-mysql-data-volume:
+  mysql-data-volume:
 

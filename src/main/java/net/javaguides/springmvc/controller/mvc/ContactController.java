@@ -18,7 +18,7 @@ import net.javaguides.springmvc.exception.ResourceNotFoundException;
 import net.javaguides.springmvc.service.ContactService;
 
 @Controller("mvc")
-@RequestMapping("/contacts")
+@RequestMapping("/contact")
 public class ContactController {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(ContactController.class);
@@ -44,7 +44,7 @@ public class ContactController {
 	@PostMapping("/saveContact")
 	public String saveContact(@ModelAttribute("contact") Contact theContact) {
 		contactService.saveContact(theContact);
-		return "redirect:/contacts/list";
+		return "redirect:/contact/list";
 	}
 	
 	@GetMapping("/updateForm")
@@ -57,6 +57,6 @@ public class ContactController {
 	@GetMapping("/delete")
 	public String deleteContact(@RequestParam("contactId") int theId) throws ResourceNotFoundException {
 		contactService.deleteContact(theId);
-		return "redirect:/contacts/list";
+		return "redirect:/contact/list";
 	}
 }
